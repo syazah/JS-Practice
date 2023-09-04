@@ -14,3 +14,19 @@ let scoreTwo = "33abc";
 let num2 = Number(scoreTwo);
 console.log(typeof num2);
 console.log(num2);
+
+/*************************************OPERATIONS*************************************************** */
+
+//These are some complex Operations:- 
+//If string is written first then everything is converted into strings.
+console.log("1" + 2 + 2);
+//Else first we do normal operations  
+console.log(1+2+"2");
+
+//PREFIC AND POSTFIX
+let a = 101;
+++a; //first increases and does operations
+a++; //first operation and then increases
+
+
+
