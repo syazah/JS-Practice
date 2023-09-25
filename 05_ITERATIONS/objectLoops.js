@@ -24,3 +24,6 @@ code.forEach((item) => {
     console.log(item);
     // for each never returns a value
 })
+
+const numbers = [1,2,3,4,5,6];
+let newNums = numbers.filter((num) => num > 4 ) //filter returns value
