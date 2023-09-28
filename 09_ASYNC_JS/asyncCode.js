@@ -1,0 +1,10 @@
+/* JAVASCRIPT IS A 
+SYNCHRONOUS (Executes the code line by line)
+SINGLE THREADED LANGUAGE (Only a single thread is present) 
+This is the default behaviour of JAVASCRIPT
+*/
+
+/* TYPES OF CODE IN JS:- 
+    BLOCKING CODE :- BLOCKS THE FLOW OF THE PROGRAM (READ FILE SYNC)
+    NON BLOCKING CODE :- DOES NOT BLOCKS THE CODE EXECUTION (READ FILE ASYNC) 
+*/
