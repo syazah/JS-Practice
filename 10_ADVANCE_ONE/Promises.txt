@@ -1,0 +1,9 @@
+Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It acts as a proxy value.
+
+Many Operations are not done just at the instant. Some of the operations like network access, file fetching, database requests, cryptography require time to which we apply async await but in modern programming instead of async await we use Promises.
+
+Three states of Promises
+Pending 
+Fulfilled
+Rejected
+
