@@ -29,9 +29,53 @@ const promiseTwo = new Promise(function(resolve, reject){
     console.log(user);
 })
 
-//-------------CHAINING------------------------------------------------------------------------
+//-------------HANDLING ERRORS------------------------------------------------------------------------
 const promiseThree = new Promise(function(resolve, reject) {
     setTimeout(function(){
-        resolve()
-    }, 1000)
+        const error = false;
+        if(!error){
+            resolve({username:"Azaan", userId: 11234});
+        }else{
+            reject("ERROR: Something Went Wrong");
+        }
+    }, 1000);
 })
+
+//HERE CHAINING IS DONE TO GET THE RETURNING VALUE OF THE .then
+promiseThree.then((user)=>{
+    console.log(user);
+    return user.username;
+})/*Used for resolve*/.then((username) =>{
+    console.log(username);
+})/*Used for reject*/.catch((error)=>{
+    console.log(error);
+})/*Used for final result*/.finally(()=> console.log("Either Rejected or Resolved"));
+
+//-------------ASYNC AWAIT-----------------------------------------------------------------------
+const promiseFive = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        const error = true;
+        if(!error){
+            resolve({username:"Ahmad", userId: 11234});
+        }else{
+            reject("ERROR: JS Went Wrong");
+        }
+    }, 1000);
+});
+
+/*async function consumePromiseFive(){
+    const resolving = await promiseFive;
+    console.log(resolving);
+} used for not handling error*/
+
+async function consumePromiseFive(){
+    try{
+        const resolving = await promiseFive;
+        console.log(resolving);
+    }catch(error){
+        console.log(error);
+    }
+} // for handling errors
+
+consumePromiseFive();
+
